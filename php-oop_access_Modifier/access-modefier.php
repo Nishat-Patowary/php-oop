@@ -16,7 +16,8 @@ class base{
 $nick= new base("Tanvirul");  //----------public so access any-places------------//
 $nick->show();
 
-//----------------------------------//
+
+//---------------------------------------------------------------------------//
 
 class baseform{
     public $name;
@@ -32,7 +33,9 @@ class baseform{
 
 $t1=new baseform("tanvirul nishat");
 $t1->total();
-//-----------------------public access used------------------------//
+
+
+//----------------------------------public access used------------------------------------//
 
 
 class based{
@@ -58,7 +61,7 @@ class derived extends based{
 $nicked=new derived("tanvirul HQ");
 $nicked->get();
 
-//-----------------------------------------------//
+//----------------------------------------------------------------------------------//
 
 class proper{
     protected $name;
@@ -82,7 +85,7 @@ class hyper extends proper{
 $nick=new hyper("tanvirul nishat");
 $nick->get();
 
-//--------------------------------------------//
+//----------------------------------------------------------------------//
 
 
 class info {
@@ -133,7 +136,7 @@ $test= new name("tanvirul hq");
 $test->show();
 
 
-//--------------private access used---------------------//
+//--------------------------------------private access used------------------------------------//
 
 ?>
 
