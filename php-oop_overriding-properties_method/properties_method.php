@@ -14,7 +14,7 @@ echo $result->name;
 $result=new second();
 echo $result->name;
 
-//--------------------------//
+//-------------------------------------------//
 
 
 class nishat{
