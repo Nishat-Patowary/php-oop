@@ -47,7 +47,32 @@ $a2->show();
 $a3->show();
 $a4->show();
 
+//-------------------------------------------------------//
+
+class car{
+    private $first;
+    private $weight;
+
+    public function __construct()
+    {
+        echo "This is a car<br>";
+    }
+}
+$mix= new car();
+//-------------------------------------------------------//
+
+
+class bike{
+    private $color;
+    private $weight;
+
+    public function __construct()
+    {
+       
+      echo "This is bike";
+    }
+}
+$mic=new bike();
 
 //-------------------constructor used---------------//
-
 ?>
