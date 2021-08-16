@@ -361,5 +361,24 @@ var_dump($net);
 //------------------------------------- sleep-method used-------------------------------------//
 
 
+class student{
+    public $name;
+    public $age;
 
+    public function __construct($name,$age)
+    {
+        $this->name = $name;
+        $this->age = $age;
+    }
+
+    public function __wakeup()
+    {
+        echo "This is a wakeup method<br>";
+    }
+}
+
+$newc= new student(name: "nishat" , age: 21);
+$seri= serialize($newc);
+$nit= unserialize($seri);
+var_dump($nit);
 ?>
