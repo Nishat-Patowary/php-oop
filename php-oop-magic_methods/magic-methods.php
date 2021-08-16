@@ -381,4 +381,32 @@ $newc= new student(name: "nishat" , age: 21);
 $seri= serialize($newc);
 $nit= unserialize($seri);
 var_dump($nit);
+
+//-------------------------------------------------------------//
+
+class studentss{
+    public $name;
+    private $age;
+
+    public function __construct($name,$age)
+    {
+        $this->name = $name;
+        $this->age = $age;
+    }
+
+    public function __wakeup()
+    {
+        echo "The function is wakeup right now<br>";
+    }
+}
+
+$mir= new studentss(name:"shanto",age:21);
+$seria= serialize($mir);
+$htm= unserialize($seria);
+var_dump($htm);
+
+//--------------------------------------wakeup method used-=-----------------------------------//
+
+
+
 ?>
