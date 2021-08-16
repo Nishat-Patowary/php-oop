@@ -408,5 +408,49 @@ var_dump($htm);
 //--------------------------------------wakeup method used-=-----------------------------------//
 
 
+class animals{
+    public $first;
+    private $second;
+
+    public function __construct($one,$two)
+    {
+        $this->first = $one;
+        $this->second = $two;
+    }
+
+    public function __clone()
+    {
+        var_dump($this);
+    }
+}
+
+$mit= new animals(one:"tiger",two: "lion");
+var_dump($mit);
+$newanimal= clone($mit);
+
+//------------------------------------//
+
+class animal2{
+    public $first;
+    private $second;
+
+    public function __construct($one,$two)
+    {
+        $this->first = $one;
+        $this->second = $two;
+    }
+
+    public function __clone()
+    {
+        var_dump($this);
+    }
+}
+
+$zoo= new animal2(one:"lion", two: "tiger");
+var_dump($zoo);
+$zooanimal= clone($zoo);
+
+//----------------------------------------clone-method used--------------------------------------//
+
 
 ?>
