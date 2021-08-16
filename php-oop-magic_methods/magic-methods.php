@@ -221,11 +221,11 @@ class students{
     public $name = "rakib";
     private $phone = 12345;
 
-    public function __call($name, $arguments)
+    public function __call($rkname, $arguments)
     {
-        if($name === "getmobilephone"){
+        if($rkname === "getmobilephone"){
             return $this->getphone();
-        }else if ($name === "setmobilephone"){
+        }else if ($rkname === "setmobilephone"){
             $this->setphone($arguments);
         }
     }
@@ -245,4 +245,69 @@ echo $c->getmobilephone();
 
 $c->setphone("1111111");
 echo $c->getphone();
+
+//-------------------------------------------------//
+
+
+class diploma{
+    public $name = "nishat";
+    public $phone =231266;
+
+    public function __call($niname, $niarguments)
+    {
+        if($niname === "getphoneset"){
+            return $this->getphone();
+        }else if ($niname === "setphoneset"){
+            $this->setphone($niarguments);
+        }
+    }
+
+    public function getphone(){
+        return $this->phone;
+    }
+
+    public function setphone($phone){
+        $this->phone = $phone;
+    }
+}
+
+$mib=new diploma();
+echo $mib->getphoneset();
+
+$mib->setphone("4464646");
+echo $mib->getphone();
+
+//-------------------------------------call-method used-----------------------------------//
+
+class lion{
+    public $name="king";
+    private $place= "forest";
+
+    public function __invoke()
+    {
+        echo "The lion is a king in a forest<br>";
+    }
+}
+
+$li=new lion();
+echo $li();
+
+//-------------------------------------------------------------------//
+
+
+class tiger{
+    public $name = "royel_bengol";
+    private $place= "forest";
+
+    public function __invoke()
+    {
+        echo "This is a tiger<br>";
+    }
+}
+
+$ti= new tiger();
+var_dump(is_callable($ti));
+echo $ti();
+
+//-------------------------------- used to invoke method------------------------------// 
 ?>
