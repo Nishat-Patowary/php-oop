@@ -310,4 +310,56 @@ var_dump(is_callable($ti));
 echo $ti();
 
 //-------------------------------- used to invoke method------------------------------// 
+
+
+class number{
+    public $name;
+    private $phone;
+
+    public function __construct($name,$phone)
+    {
+        $this->first = $name;
+        $this->second = $phone;
+    }
+
+    public function __sleep()
+    {
+        unset($this->phone);
+            return ["name"];
+    }
+}
+
+$nic= new number(name: "school" , phone: "college");
+$serializec= serialize($nic);
+$news= unserialize($serializec);
+var_dump($news);
+
+//-----------------------------------------------//
+
+class numbers{
+    public $name;
+    private $phone;
+
+    public function __construct($name,$phone)
+    {
+        $this->name = $name;
+        $this->phone = $phone;
+    }
+
+    public function __sleep()
+    {
+        unset($this->phone);
+        return ["name"];
+    }
+}
+
+$micc= new numbers(name: "college", phone: "school");
+$serialize= serialize($micc);
+$net= unserialize($serialize);
+var_dump($net);
+
+//------------------------------------- sleep-method used-------------------------------------//
+
+
+
 ?>
