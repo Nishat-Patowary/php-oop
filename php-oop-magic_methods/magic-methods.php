@@ -557,4 +557,6 @@ $new2=unserialize(serialize($hyper));
 var_dump($hyper,$newstu,$new2);
 echo studnt::$info;
 
+//----------------------------clone method used---------------------------//
+
 ?>
