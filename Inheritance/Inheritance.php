@@ -89,7 +89,7 @@ class student{
 
 }
 
-class numbersd extends student{
+class hyper extends student{
     protected $roll2 = "20";
 
     public function getroll2(){
@@ -99,7 +99,7 @@ class numbersd extends student{
     }
 }
 
-$mix= new numbersd();
+$mix= new hyper();
 echo $mix->getroll2();
 //-------------------------------------------------------//
 
@@ -261,5 +261,56 @@ echo $miv->bondhu();
 
 //----------------------------------------------------------------//
 
+class nishatt{
+    public $name;
+    protected $age;
+    private $phone;
+
+    public function __construct($name,$age,$phone)
+    {
+        $this->name = $name;
+        $this->age = $age;
+        $this->phone = $phone;
+    }
+
+    public function bondhu(){
+        return "This is my best friend";
+    }
+}
+
+class niloy extends nishatt{
+    private $place;
+
+    public function __construct($name,$age,$phone,$place)
+    {
+        parent::__construct($name,$age,$phone);
+            $this->place = $place;
+    
+    }
+
+    public function bondhu(){
+        return "This is my best friend";
+    }
+}
+
+class nihal extends niloy{
+    public $bondhuname;
+    public function __construct($name,$age,$phone,$bonum)
+    {
+        parent::__construct($name,$age,$phone);
+        $this->bonum = $bonum;
+
+    }
+
+    public function bondhu(){
+        return "i am a boy : $this->name . with no : $this->bondhunumber";
+    }
+}
+
+$miv= new niloy(name: "shanto", age: 21, phone:033666, place:"dhaka");
+$mib= new nihal(name: "shanto", age: 21, phone:033666, bonum:2);
+
+echo $miv->bondhu();
+echo $mib->bondhu();
 
 ?>
