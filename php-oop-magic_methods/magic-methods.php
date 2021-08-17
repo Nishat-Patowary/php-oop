@@ -453,4 +453,53 @@ $zooanimal= clone($zoo);
 //----------------------------------------clone-method used--------------------------------------//
 
 
+class anime{
+    public $first;
+    private $second;
+    
+    static  $counter=0;
+    public function __construct($one,$two)
+    {
+        $this->first = $one;
+        $this->second = $two;
+        self::$counter++;
+    }
+
+    public function __clone()
+    {
+        self::$counter++;
+    }
+}
+
+$g= new anime(one: "shanto", two: "shihab");
+$newg= clone $g;
+echo anime::$counter;
+
+//-------------------------------------------------------//
+
+class animalc{
+    public $first;
+    private $second;
+    static $counters=0;
+
+    public function __construct($lion,$tiger)
+    {
+        $this->first = $lion;
+        $this->second = $tiger;
+        static::$counters++;
+    }
+
+    public function __clone()
+    {
+        self::$counters++;
+    }
+}
+
+$b= new animalc(lion: "the king", tiger: "the forest");
+$newb= clone $b;
+echo animalc::$counters;
+
+//------------------------------------------------------//
+
+
 ?>
