@@ -220,4 +220,46 @@ class employee extends workers{
 
 $employe= new employee( name:"Nishat" , age:21 , phone:21542, salary:5000 );
 echo $employe->hello();
+
+
+//--------------------------------------------------------//
+
+class best{
+    public $name;
+    protected $age;
+    private $phone;
+
+    public function __construct($name,$age,$phone)
+    {
+        $this->name = $name;
+        $this->age = $age;
+        $this->phone = $phone;
+    }
+
+    public function bondhu(){
+        return "This is my best friend";
+    }
+}
+
+class bestfriend extends best{
+    private $place;
+
+    public function __construct($name,$age,$phone,$place)
+    {
+        parent::__construct($name,$age,$phone);
+            $this->place = $place;
+    
+    }
+
+    public function bondhu(){
+        return "This is my best friend";
+    }
+}
+
+$miv= new bestfriend(name: "shanto", age: 21, phone:033666, place:"dhaka");
+echo $miv->bondhu();
+
+//----------------------------------------------------------------//
+
+
 ?>
