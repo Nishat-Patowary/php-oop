@@ -1,5 +1,6 @@
 <?php
 
+use employee as GlobalEmployee;
 use students as GlobalStudents;
 
 class parentclass{
@@ -152,7 +153,7 @@ class closedd extends friends{
         return "This is a line  " . $result;
     }
 
-    public function printtext($text)
+    public function printtext( string $text)
     {
         echo $text;
     }
@@ -160,4 +161,63 @@ class closedd extends friends{
 
 $mic=new closedd();
 echo $mic->getinfo2();
+
+//-------------------------------------------------------//
+
+
+class myclass{
+    public $property1 = "1";
+    protected $property2 = "2";
+    private $property3 = "3";
+
+    const my_constant = "my constant";
+}
+
+class secondclass extends myclass{
+    protected $property2 = "22";
+
+    const my_constant = "second_class";
+
+}
+
+$mic= new secondclass();
+echo $mic::my_constant;
+
+
+
+
+class workers{
+    public $name;
+    protected $age;
+    private $phone;
+
+    public function __construct($name,$age,$phone)
+    {
+        $this->name = $name;
+        $this->age = $age;
+        $this->phone = $phone;
+    }
+
+    public function hello(){
+        return "hello from person";
+    }
+}
+
+class employee extends workers{
+    private $salary;
+
+    public function __construct($name,$age,$phone,$salary)
+    {
+        parent::__construct($name,$age,$phone);
+        $this->salary = $salary;
+    }
+
+    public function hello(){
+        return "I am an employe:  $this->name";
+    }
+
+}
+
+$employe= new employee( name:"Nishat" , age:21 , phone:21542, salary:5000 );
+echo $employe->hello();
 ?>
