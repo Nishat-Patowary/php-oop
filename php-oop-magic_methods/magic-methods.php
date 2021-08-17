@@ -502,4 +502,59 @@ echo animalc::$counters;
 //------------------------------------------------------//
 
 
+class friendv{
+    public $first;
+    private $second;
+
+    static $cons= 0;
+    public function __construct($shihab,$shanto)
+    {
+        $this->first = $shihab;
+        $this->second = $shanto;
+        self::$cons++;
+    }
+
+    public function __clone()
+    {
+        self::$cons++;
+    }
+}
+
+$fri= new friendv(shihab: "closs",shanto : "closs");
+$newfri= clone $fri;
+$new2fri= unserialize(serialize($fri));
+var_dump($fri,$newfri,$new2fri);
+echo friendv::$cons;
+
+//-------------------------------------------------------//
+
+
+class studnt{
+
+    public $name;
+    private $address;
+
+    static $info=0;
+
+    public function __construct($omer,$dhaka)
+    {
+        $this->name = $omer;
+        $this->address = $dhaka;
+        self::$info++;
+
+    }
+
+    public function __clone()
+    {
+        self::$info++;
+    }
+}
+
+$hyper= new studnt(omer:"vaw", dhaka: "donia");
+$newstu= clone $hyper;
+$new2=unserialize(serialize($hyper));
+
+var_dump($hyper,$newstu,$new2);
+echo studnt::$info;
+
 ?>
