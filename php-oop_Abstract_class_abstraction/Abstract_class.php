@@ -69,4 +69,32 @@ class tamim extends bishal{
 
 $mix=new tamim();
 $mix->number(100,20);
+
+//------------------------------------------------//
+
+abstract class nihal{
+    public $color;
+
+    public function __construct($color)
+    {
+         $this->color = $color;
+    }
+    abstract public function getarea(): float;
+
+    public function getcolor(){
+        return $this->color;
+    }
+}
+
+class nihat extends nihal{
+
+    public function getarea(): float
+    {
+    
+        
+    }
+}
+
+$mic=new nihat("red");
+echo $mic->color;
 ?>
