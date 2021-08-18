@@ -229,4 +229,45 @@ class bike_showroom implements bikes{
 $bike_show= new bike_showroom();
 echo $bike_show->firstbike();
 echo $bike_show->secondbike();
+
+//-----------------------------------------------------------------//
+
+
+interface children{
+    public function first_child();
+}
+
+interface children2{
+    public function second_child();
+}
+
+interface children3 extends children,children2{
+    public function third_child();
+}
+
+class childhome implements children3{
+    public function first_child()
+    {
+        echo "the child number is one<br>";
+    }
+
+    public function second_child()
+    {
+        echo "the child number is one<br>";
+    }
+
+    public function third_child()
+    {
+        echo "the child number is one<br>";
+    }
+}
+
+$child_teacher = new childhome();
+echo $child_teacher->first_child();
+echo $child_teacher->second_child();
+echo $child_teacher->third_child();
+
+//-----------------------------------------------------------------//
+
+
 ?>
