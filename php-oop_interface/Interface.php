@@ -93,10 +93,34 @@ abstract class myclass implements myinterface{
 class myclass2 extends myclass{
     public function method(){
 
-        echo "This is a php line";
+        echo "This is a php line<br>";
     }
 }
 
 $mix= new myclass2();
 echo $mix->method();
+
+//------------------------------------------------------------------------------//
+
+
+interface myfriend{
+    public function firstfriend();
+    public function secondfriend();
+}
+
+abstract class clossfriend implements  myfriend{
+    public function firstfriend(){
+
+    }
+}
+
+class clossfriendname extends clossfriend{
+    public function secondfriend()
+    {
+        echo "my closs friend";
+    }
+}
+
+$mic= new clossfriendname();
+echo $mic->secondfriend();
 ?>
