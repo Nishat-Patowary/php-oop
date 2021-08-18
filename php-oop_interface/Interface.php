@@ -151,4 +151,36 @@ class myclassr implements myclassmate,myclassmate2{
 $classmate= new myclassr();
 echo $classmate->first();
 echo $classmate->second();
+
+//-----------------------------------------------------------------//
+
+interface mycar{
+    public function firstcar();
+    public function secondcar();
+}
+
+interface mycar2{
+    public function secondcar();
+}
+
+class myhome implements mycar,mycar2{
+    public function firstcar(){
+        echo "The car brand is lamborgini<br>";
+    }
+
+    public function secondcar()
+    {
+        echo "The car brand is bmw<br>";
+    }
+}
+
+
+$mix= new myhome();
+echo $mix->firstcar();
+echo $mix->secondcar();
+
+//-----------------------------------------------------------------//
+
+
+
 ?>
