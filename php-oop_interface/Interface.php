@@ -73,4 +73,30 @@ class friend implements college1,college2{
 $hyper= new friend();
 $hyper->buddy(500,130);
 $hyper->closs(50,60);
+
+//------------------------------------------------------------------------------//
+
+
+interface myinterface{
+
+    public function method();
+    public function method2();
+}
+
+abstract class myclass implements myinterface{
+    public function method2(){
+
+    }
+}
+
+
+class myclass2 extends myclass{
+    public function method(){
+
+        echo "This is a php line";
+    }
+}
+
+$mix= new myclass2();
+echo $mix->method();
 ?>
