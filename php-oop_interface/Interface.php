@@ -185,11 +185,11 @@ interface birds{
     public function bird1();
 }
 
-interface  bird_calculate extends birds{
+interface  bird_2 extends birds{
     public function bird2();
 }
 
-class bird_class implements bird_calculate{
+class bird_class implements bird_2{
     public function bird1(){
         echo "This is bird number 1<br>";
     }
@@ -206,4 +206,27 @@ echo  $bird->bird2();
 //-----------------------------------------------------------------//
 
 
+interface bike{
+    public function firstbike();
+    public function secondbike();
+}
+
+interface bikes extends bike{
+    public function secondbike();
+}
+
+class bike_showroom implements bikes{
+    public function firstbike(){
+        echo "The bike brand is yamaha<br>";
+    }
+
+    public function secondbike()
+    {
+        echo "The bike brand is suzuki<br>";
+    }
+}
+
+$bike_show= new bike_showroom();
+echo $bike_show->firstbike();
+echo $bike_show->secondbike();
 ?>
