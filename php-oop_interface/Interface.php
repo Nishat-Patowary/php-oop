@@ -181,6 +181,29 @@ echo $mix->secondcar();
 
 //-----------------------------------------------------------------//
 
+interface birds{
+    public function bird1();
+}
+
+interface  bird_calculate extends birds{
+    public function bird2();
+}
+
+class bird_class implements bird_calculate{
+    public function bird1(){
+        echo "This is bird number 1<br>";
+    }
+
+    public function bird2(){
+        echo "This is bird number 2<br>";
+    }
+}
+
+$bird= new bird_class();
+echo $bird->bird1();
+echo  $bird->bird2();
+
+//-----------------------------------------------------------------//
 
 
 ?>
