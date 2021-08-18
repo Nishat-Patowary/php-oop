@@ -129,11 +129,11 @@ echo $mic->secondfriend();
 
 interface myclassmate{
     public function first();
-    public function second(): string;
+    public function second();
 }
 
 interface myclassmate2{
-    public function second(): string;
+    public function second();
 }
 
 class myclassr implements myclassmate,myclassmate2{
@@ -142,7 +142,7 @@ class myclassr implements myclassmate,myclassmate2{
         echo "This is my first classmate<br>";
     }
 
-    public function second(): string{
+    public function second(){
 
         echo "This is my second classmate<br>";
     }
@@ -151,5 +151,4 @@ class myclassr implements myclassmate,myclassmate2{
 $classmate= new myclassr();
 echo $classmate->first();
 echo $classmate->second();
-
 ?>
