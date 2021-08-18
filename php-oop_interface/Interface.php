@@ -123,4 +123,33 @@ class clossfriendname extends clossfriend{
 
 $mic= new clossfriendname();
 echo $mic->secondfriend();
+
+//------------------------------------------------------------------------------//
+
+
+interface myclassmate{
+    public function first();
+    public function second(): string;
+}
+
+interface myclassmate2{
+    public function second(): string;
+}
+
+class myclassr implements myclassmate,myclassmate2{
+    public function first(){
+
+        echo "This is my first classmate<br>";
+    }
+
+    public function second(): string{
+
+        echo "This is my second classmate<br>";
+    }
+}
+
+$classmate= new myclassr();
+echo $classmate->first();
+echo $classmate->second();
+
 ?>
