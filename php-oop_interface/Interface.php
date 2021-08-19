@@ -267,7 +267,6 @@ echo $child_teacher->first_child();
 echo $child_teacher->second_child();
 echo $child_teacher->third_child();
 
-//-----------------------------------------------------------------//
 
 
 ?>
