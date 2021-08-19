@@ -173,14 +173,14 @@ class myclass{
     const my_constant = "my constant";
 }
 
-class secondclass extends myclass{
+class  nishat extends myclass{
     protected $property2 = "22";
 
     const my_constant = "second_class";
 
 }
 
-$mic= new secondclass();
+$mic= new nishat();
 echo $mic::my_constant;
 
 
