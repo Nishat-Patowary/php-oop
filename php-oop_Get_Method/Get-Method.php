@@ -44,4 +44,6 @@ class second{
 
 $mixed= new second();
 echo $mixed->place;
+
+//---------------------------------------------------//
 ?>
