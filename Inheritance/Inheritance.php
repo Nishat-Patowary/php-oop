@@ -259,6 +259,5 @@ class bestfriend extends best{
 $miv= new bestfriend(name: "shanto", age: 21, phone:033666, place:"dhaka");
 echo $miv->bondhu();
 
-//----------------------------------------------------------------//
 
 ?>
