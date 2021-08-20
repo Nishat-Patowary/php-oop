@@ -1,5 +1,6 @@
-<?php 
+<?php
 
+use second as GlobalSecond;
 
 class plane{
    public function fly(){
@@ -20,5 +21,31 @@ $Helicopter = new helicopter();
 
 $mix->fly();
 $Helicopter->fly();
+
+//---------------------------------------------------//
+
+
+trait myfriend{
+    public function best(){
+        echo "They are my friends<br>";
+    }
+}
+
+class first{
+    use myfriend;
+}
+
+class second{
+    use myfriend;
+}
+
+$one= new first();
+$one->best();
+
+$two = new second();
+$two->best();
+
+//--------------------------------------------------------//
+
 
 ?>
