@@ -47,5 +47,29 @@ $two->best();
 
 //--------------------------------------------------------//
 
+trait student{
+    public function info(){
+
+        echo "This is student number<br>";
+    }
+}
+
+class first_student{
+    use student;
+}
+
+class second_student{
+    use student;
+}
+
+$student1= new first_student();
+$student2= new second_student();
+
+$student1->info();
+$student2->info();
+
+//------------------------------------------------------------//
+
+
 
 ?>
