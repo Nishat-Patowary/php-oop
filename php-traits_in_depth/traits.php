@@ -93,5 +93,24 @@ $lion->forest();
 
 //----------------------------------------------------------------//
 
+trait college{
+    public function name(){
+        echo "The college name is mupi<br>";
+    }
+}
 
+
+class college_1 extends college{
+
+}
+
+class college_2 extends college{
+
+}
+
+$one= new college_1();
+$two= new college_2();
+
+$one->name();
+$two->name(); 
 ?>
