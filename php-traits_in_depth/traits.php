@@ -70,6 +70,28 @@ $student2->info();
 
 //------------------------------------------------------------//
 
+trait animal{
+    public function forest(){
+        echo "The animal name<br>";
+    }
+}
+
+
+class animal_first{
+    use animal;
+}
+
+class animal_second{
+    use animal;
+}
+
+$tiger= new animal_first();
+$lion= new animal_second();
+
+$tiger->forest();
+$lion->forest();
+
+//----------------------------------------------------------------//
 
 
 ?>
