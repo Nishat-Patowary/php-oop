@@ -1,6 +1,7 @@
 <?php
 
 use calculate as GlobalCalculate;
+use nishat as GlobalNishat;
 use second as GlobalSecond;
 
 class plane{
@@ -360,4 +361,27 @@ class b extends a{
 
 $miv= new b();
 $miv->hello();
-?>
+
+//--------------------------------------------------//
+
+
+class nishat{
+    public function one(){
+        echo "The class from nishat";
+    }
+}
+
+trait nihal{
+
+    public function one(){
+        echo "The class from nihal";
+    }
+}
+
+class shanto extends nishat{
+    use nihal;
+}
+
+$mib= new 
+
+//---------------------------------------------------------//
