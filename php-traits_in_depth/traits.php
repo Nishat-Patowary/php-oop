@@ -339,4 +339,9 @@ class teacher{
 $teach = new teacher();
 $teach->stu_name();
 $teach->student();
+
+//------------------------------------------------------//
+
+
+
 ?>
