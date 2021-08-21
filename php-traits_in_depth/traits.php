@@ -1,5 +1,6 @@
 <?php
 
+use calculate as GlobalCalculate;
 use second as GlobalSecond;
 
 class plane{
@@ -169,6 +170,41 @@ $mic->bike_lover();
 $micc->bike_lover();
 
 //------------------------------------------------------//
+
+trait birds{
+    public function beautiful(){
+        echo "The bird is so beautiful<br>";
+    }
+}
+
+trait bird2{
+    public function cute(){
+        echo "The bird is so cute<br>";
+    }
+}
+
+class calculatec{
+    use birds,bird2;
+}
+
+class calculated{
+    use birds,bird2;
+}
+
+class cal{
+    use bird2;
+}
+
+$num1= new calculatec();
+$num1->beautiful();
+
+$num2= new calculated();
+$num2->beautiful();
+
+$num3= new cal();
+$num3->cute();
+
+//----------------------------------------------------------//
 
 
 ?>
