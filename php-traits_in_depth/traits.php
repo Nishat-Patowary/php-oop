@@ -280,6 +280,36 @@ $user2->samsung();
 
 //----------------------------------------------------------//
 
+trait fish{
+    abstract public function swim();
+    public function hello(){
+        echo "The fish is swimming<br>";
+    }
+}
+
+trait fishing{
+    public function hello(){
+        echo "The fish in a river<br>";
+    }
+}
+
+class fishman{
+    use fish,fishing{
+        fish::hello insteadof fishing;
+        fishing::hello as myself;
+    }
+
+    public function swim()
+    {
+        echo "The fish is swimming in a plant<br>";
+    }
+}
+
+$first= new fishman();
+$first->swim();
+$first->hello();
+
+//-------------------------------------------------------//
 
 
 ?>
