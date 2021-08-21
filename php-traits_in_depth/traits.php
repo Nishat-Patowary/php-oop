@@ -93,8 +93,8 @@ $lion->forest();
 
 //----------------------------------------------------------------//
 
-trait college{
-    public function name(){
+class college{
+    public function hyper(){
         echo "The college name is mupi<br>";
     }
 }
@@ -111,9 +111,27 @@ class college_2 extends college{
 $one= new college_1();
 $two= new college_2();
 
-$one->name();
-$two->name(); 
+$one->hyper();
+$two->hyper(); 
 
 //----------------------------------------------------------------//
 
+class car{
+    public function lamborgini(){
+        echo "The car name is lamborgini<br>";
+    }
+}
+
+class car_1 extends car{
+
+}
+class car_2 extends car{
+
+}
+
+$bmw= new car_1();
+$odi= new car_2();
+
+$bmw->lamborgini();
+$odi->lamborgini();
 ?>
