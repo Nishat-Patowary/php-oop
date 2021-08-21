@@ -382,5 +382,6 @@ class shanto extends nishat{
     use nihal;
 }
 
-$mib= new 
+$mib= new
 
+//--------------------------------------------------//
