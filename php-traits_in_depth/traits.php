@@ -311,5 +311,32 @@ $first->hello();
 
 //-------------------------------------------------------//
 
+trait classroom{
+    abstract public function student();
+    public function stu_name(){
+        echo "This is a classroom<br>";
+    }
+}
 
+trait class_room{
+
+    public function stu_name(){
+        echo "This is a classroom<br>";
+    }
+}
+
+class teacher{
+    use classroom,class_room{
+        classroom::stu_name insteadof class_room;
+        class_room::stu_name as my_classroom;
+    }
+
+    public function student(){
+        echo "The teacher come to the class<br>";
+    }
+}
+
+$teach = new teacher();
+$teach->stu_name();
+$teach->student();
 ?>
