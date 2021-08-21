@@ -342,6 +342,22 @@ $teach->student();
 
 //------------------------------------------------------//
 
+class a{
+    public function hello(){
+        echo "hello from class a";
+    }
+}
 
+trait traitA{
+    public function hello(){
+        echo "hello from trait a";
+    }
+}
 
+class b extends a{
+    use traitA;
+}
+
+$miv= new b();
+$miv->hello();
 ?>
