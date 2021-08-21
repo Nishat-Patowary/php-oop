@@ -241,4 +241,45 @@ $bird_childs->fly();
 //-----------------------------------------------------------------//
 
 
+trait mobile{
+    abstract public function iphone();
+}
+
+trait mobile_ang{
+    public function  samsung(){
+        echo "This is a angroid phone<br>";
+    }
+}
+
+
+class phone1{
+    use mobile,mobile_ang;
+    public function iphone(){
+        echo "iphone ios is the best for users<br>";
+    }
+}
+
+class phone2{
+    use mobile,mobile_ang;
+    public function iphone()
+    {
+        echo "iphone ios is the best for users<br>";
+    }
+}
+
+
+$user1= new phone1();
+$user2= new phone2();
+
+
+$user1->iphone();
+$user2->iphone();
+
+$user1->samsung();
+$user2->samsung();
+
+//----------------------------------------------------------//
+
+
+
 ?>
