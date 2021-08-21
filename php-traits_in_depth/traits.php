@@ -206,5 +206,39 @@ $num3->cute();
 
 //----------------------------------------------------------//
 
+trait flying{
+    abstract public function fly();
+}
+
+trait bird{
+
+    public function sky(){
+        echo "The bird is flying<br>";
+    }
+}
+
+class bird1{
+    use flying, bird;
+    public function fly(){
+        echo "The bird is flying the sky 50km hour<br>";
+    }
+}
+
+class bird_2{
+    use flying,bird;
+    public function fly(){
+        echo "The bird is flying the sky 50km hour<br>";
+    }
+}
+
+$bird_child= new bird1();
+$bird_child->fly();
+
+
+$bird_childs = new bird_2();
+$bird_childs->fly();
+
+//-----------------------------------------------------------------//
+
 
 ?>
