@@ -134,4 +134,41 @@ $odi= new car_2();
 
 $bmw->lamborgini();
 $odi->lamborgini();
+
+//----------------------------------------------------------//
+
+
+
+trait bike{
+    public function bike_lover(){
+        echo "This is a bike<br>";
+    }
+}
+
+trait cars{
+    public function car_lover(){
+
+        echo "This is a car<br>";
+    }
+}
+class bike_1{
+
+    use bike, cars;
+}
+
+class bike_2{
+
+    use bike,cars;
+}
+
+
+$mic= new bike_1();
+$micc= new bike_2();
+
+$mic->bike_lover();
+$micc->bike_lover();
+
+//------------------------------------------------------//
+
+
 ?>
