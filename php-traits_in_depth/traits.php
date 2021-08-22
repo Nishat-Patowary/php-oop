@@ -430,3 +430,37 @@ $nara= new L();
 $nara->place();
 
 //--------------------------------------------------/
+
+
+trait social{
+    public function share(){
+        echo self::class. "shared with id :".$this->id . "<br>";
+    }
+}
+
+class post{
+    public $id=1;
+    use social;
+}
+
+class photo{
+    public $id=1;
+    use social;
+}
+
+class content{
+    public $id=1;
+    use social;
+}
+
+
+$post= new post();
+$post->share();
+
+$photo= new photo();
+$photo->share();
+
+$content= new content();
+$content->share();
+
+//--------------------------------------------------------//
