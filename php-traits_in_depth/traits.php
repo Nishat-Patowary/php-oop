@@ -387,4 +387,28 @@ $result->hello();
 //--------------------------------------------------//
 
 
+class T{
+    public $var=10;
+    public function hy(){
+        echo "This is a bike<br>";
+    }
+}
+
+trait R{
+    public function hy(){
+        echo "This is a bike " .  $this->var . "<br>";
+    }
+}
+
+class Y extends T{
+    use R;
+}
+
+$mib= new T();
+$mib->hy();
+
+//-------------------------------------------------------//
+
+
+
 
