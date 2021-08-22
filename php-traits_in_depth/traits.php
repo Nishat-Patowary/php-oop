@@ -410,23 +410,23 @@ $mib->hy();
 //-------------------------------------------------------//
 
 
-class bishal{
+class U{
     public function place(){
         echo "The place name is Dhaka<br>";
     }
 }
 
-trait tamim{
+trait O{
     public function place(){
         echo "The place name is Pagla<br>" . parent::place();
     }
 }
 
-class shihab extends bishal{
-    use tamim;
+class L extends U{
+    use O;
 }
 
-$nara= new shihab();
+$nara= new L();
 $nara->place();
 
 //--------------------------------------------------/
