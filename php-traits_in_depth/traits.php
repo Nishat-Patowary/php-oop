@@ -464,3 +464,35 @@ $content= new content();
 $content->share();
 
 //--------------------------------------------------------//
+
+
+trait animals{
+    public function zoo(){
+       echo  self::class . "The animal number is :" . $this->id . "<br>";
+    }
+}
+
+class lion{
+    public $id=1;
+    use animals;
+}
+
+class fox{
+    public $id=2;
+    use animals;
+}
+
+class elephant{
+    public $id=3;
+    use animals;
+}
+
+
+$lion= new lion();
+$lion->zoo();
+
+$fox= new fox();
+$fox->zoo();
+
+$elephant= new elephant();
+$elephant->zoo();
