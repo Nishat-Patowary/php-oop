@@ -365,23 +365,26 @@ $miv->hello();
 //--------------------------------------------------//
 
 
-class nishat{
-    public function one(){
-        echo "The class from nishat";
+class firstt{
+    public function hello(){
+        echo "This is a car<br>";
     }
 }
 
-trait nihal{
-
-    public function one(){
-        echo "The class from nihal";
+trait  secondd{
+    public function hello(){
+        echo "This is a another car<br>";
     }
 }
 
-class shanto extends nishat{
-    use nihal;
+
+class thirdd extends first{
+    use secondd;
 }
 
-$mib= new
-
+$result= new thirdd();
+$result->hello();
 //--------------------------------------------------//
+
+
+
