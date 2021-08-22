@@ -16,4 +16,5 @@ class hulk_angry{
 class hulk_avenger{
     use hulk_cyko;
 }
+ 
 ?>
