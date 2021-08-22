@@ -7,4 +7,9 @@ class thor_hammer{
     }
 }
 
+class thor_place{
+    public function asgard(){
+        echo "The asgard is so beautiful<br>";
+    }
+}
 ?>

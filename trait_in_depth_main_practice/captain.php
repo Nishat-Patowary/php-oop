@@ -6,4 +6,10 @@ class captain_hammer{
     }
 }
 
+
+class captain_america{
+    public function captain(){
+        echo "captain amerial is so handsome<br>";
+    }
+}
 ?>

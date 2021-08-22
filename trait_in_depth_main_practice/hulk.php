@@ -7,4 +7,9 @@ class hulk{
     }
 }
 
+class hulk_angry{
+    public function angry_man(){
+        echo "The hulk is so stronger<br>";
+    }
+}
 ?>

@@ -6,4 +6,10 @@ class iron{
     }
 }
 
+class iron_shut{
+    public function shut(){
+        echo "The shut is so strong and stylish<br>";
+    }
+}
+
 ?>
