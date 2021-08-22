@@ -496,3 +496,38 @@ $fox->zoo();
 
 $elephant= new elephant();
 $elephant->zoo();
+
+//------------------------------------------------//
+
+trait friends{
+    public function closs(){
+        echo self::class  . "They are my closs friend :" . $this->name . "<br>";
+    }
+}
+
+class shanto{
+    public $name= "shanto";
+    use friends;
+}
+
+class shihab{
+    public $name= "shihab";
+    use friends;
+}
+
+class omer{
+    public $name= "omer";
+    use friends;
+}
+
+$shanto= new shanto();
+$shanto->closs();
+
+$shihab= new shihab();
+$shihab->closs();
+
+$omer= new omer();
+$omer->closs();
+
+//--------------------------------------------------------------//
+
