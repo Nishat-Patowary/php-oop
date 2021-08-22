@@ -12,4 +12,10 @@ class thor_place{
         echo "The asgard is so beautiful<br>";
     }
 }
+
+include "trait_class.php";
+
+class hammer{
+    use hammer_strong;
+}
 ?>
