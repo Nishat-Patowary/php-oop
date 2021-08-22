@@ -15,7 +15,9 @@ class thor_place{
 
 include "trait_class.php";
 
-class hammer{
-    use hammer_strong;
+class thor{
+    use hammer;
 }
+
+
 ?>

@@ -12,4 +12,8 @@ class hulk_angry{
         echo "The hulk is so stronger<br>";
     }
 }
+
+class hulk_avenger{
+    use hulk_cyko;
+}
 ?>
