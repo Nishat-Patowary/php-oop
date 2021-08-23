@@ -40,5 +40,5 @@ class drone{
         $this->maxplayigtime= $maxplayingtime;
     }
 }
-//------------------------------------------------------------//
+
 ?>
