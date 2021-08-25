@@ -533,3 +533,7 @@ $omer->closs();
 
 require_once "robot.php";
 require_once "drone.php";
+
+class robot{
+    use
+}

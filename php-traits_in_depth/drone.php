@@ -1,6 +1,6 @@
 <?php 
 
-class drone{
+class dronetrait{
 
 
     private $cameraresulation;
@@ -41,5 +41,28 @@ class drone{
     }
 }
 
+class drone{
+
+    use dronetrait;
+    public $cameraresulation;
+
+    public function __construct($maxflyspeed,$maxplayingtime,$cameraresulation)
+    {
+        $this->maxflyspeed= $maxflyspeed;
+        $this->cameraresulation= $cameraresulation;
+        $this->maxplayingtime= $maxflyspeed;
+    }
+
+    public function getcameraresulation(){
+        return $this->cameraresulation;
+    }
+
+    public function setcameraresulation($cameraresulation): void{
+        $this->cameraresulation = $cameraresulation;
+    }
+
+    
+
+}
 //----------------------------------------------------------//
 ?>
