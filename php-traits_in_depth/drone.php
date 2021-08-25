@@ -1,6 +1,6 @@
 <?php 
 
-class dronetrait{
+trait dronetrait{
 
 
     private $cameraresulation;
@@ -60,8 +60,6 @@ class drone{
     public function setcameraresulation($cameraresulation): void{
         $this->cameraresulation = $cameraresulation;
     }
-
-    
 
 }
 //----------------------------------------------------------//

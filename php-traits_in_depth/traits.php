@@ -535,5 +535,5 @@ require_once "robot.php";
 require_once "drone.php";
 
 class robot{
-    use
+    use robotrait,dronetrait;
 }

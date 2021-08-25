@@ -1,6 +1,6 @@
 <?php 
 
-class robotrait{
+trait robotrait{
     private $maxrunspeed=0;
     private $maxwalkingtime;
 
@@ -27,6 +27,10 @@ class robotrait{
     }
 }
 
+
+class robot{
+    use robotrait;
+}
 //--------------------------------------------------------------//
 
 ?>
