@@ -37,11 +37,11 @@ class tiger{
         $mixer= new \two\lion;
     }
 }
-
-
-
-
-
-
 }
+
+namespace student_info{
+
+    
+}
+
 ?>
