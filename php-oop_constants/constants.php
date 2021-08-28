@@ -91,7 +91,7 @@ class myclass{
 $mixx= new myclass();
 echo $mixx->gettrait();
 
-//-------------------------------------------------------//
+
 
 
 
