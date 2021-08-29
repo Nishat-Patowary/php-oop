@@ -55,13 +55,13 @@ echo $mixer->niloy();
 //used to show class name  //
 
 
-class animals{
+class zoo{
     public function cat(){
         return __METHOD__;
     }
 }
 
-$mixed= new animals();
+$mixed= new zoo();
 echo $mixed->cat();
 
 class lion{
