@@ -22,14 +22,4 @@ one\dark();
 $mix8= new one\tiger();
 
 
-
-
-
-
-
-
-
-
-
-
 ?>
