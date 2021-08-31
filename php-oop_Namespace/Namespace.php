@@ -21,5 +21,6 @@ one\dark();
 
 $mix8= new one\tiger();
 
+require_once "first-namespace.php";
 
 ?>

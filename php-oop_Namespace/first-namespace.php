@@ -39,9 +39,4 @@ class tiger{
 }
 }
 
-namespace student_info{
-
-    
-}
-
 ?>
