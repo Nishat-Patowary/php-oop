@@ -62,4 +62,25 @@ class  third{
 
 $apprt= new third();
 echo $apprt->nishat;
+
+//--------------------------------------------------------------------//
+
+class five{
+
+    private $teacher= ["name"=>"nazmul","place"=>"ak school","salary"=>"ten hazar"];
+
+    public function __get($post){
+        if(array_key_exists($post,$this->teacher)){
+            return $this->teacher[$post];
+        }else{
+            return "the key ($post) is not define";
+        }
+    }
+}
+
+$mic= new third;
+echo $mic->new;
+
+//--------------------------------------------------------------------//
+
 ?>
