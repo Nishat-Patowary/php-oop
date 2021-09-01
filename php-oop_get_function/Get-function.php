@@ -24,8 +24,19 @@ $mixer->names();
 
 echo "This is :" . get_class($mixer)."<br>";
 
+//----------------------------//
+
+class animal{
+    public function tiger(){
+        echo "This is " . get_class($this) . "<br>";
+    }
+}
+
+$miv=new animal();
+$miv->tiger();
 
 //----------------------------//
+
 
 class my_friend{
     public function closs(){
