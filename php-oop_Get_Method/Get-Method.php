@@ -45,5 +45,21 @@ class second{
 $mixed= new second();
 echo $mixed->place;
 
+//--------------------------------------------------------------------//
 
+
+class  third{
+    private $appartment= ["name"=>"bosundhora","sector"=> "second","price"=> "10 lakh"];
+
+    public function __get($customer){
+        if(array_key_exists($customer,$this->appartment)){
+            return $this->appartment[$customer];
+        }else{
+            return "The key($customer) is not define";
+        }
+    }
+}
+
+$apprt= new third();
+echo $apprt->nishat;
 ?>
