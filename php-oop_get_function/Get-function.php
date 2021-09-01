@@ -36,8 +36,6 @@ $miv=new animal();
 $miv->tiger();
 
 //----------------------------//
-//----------------------------//
-
 
 class my_friend{
     public function closs(){
