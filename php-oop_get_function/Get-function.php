@@ -24,6 +24,17 @@ $mixer->names();
 
 echo "This is :" . get_class($mixer)."<br>";
 
+
+//----------------------------//
+
+class my_friend{
+    public function closs(){
+        echo "This is my ". get_class($this) . "<br>";
+    }
+}
+
+$friend= new my_friend();
+$friend->closs();
 //---------------get_class use-------------------//
 
 
