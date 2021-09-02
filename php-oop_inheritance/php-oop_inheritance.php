@@ -34,7 +34,7 @@ class manager extends employee{  //------------used entends-----------------
 $t2= new manager("shihab",20,2000);
 $t2->info();
 
-//------------------practice-2------------------//
+//------------------practice-1------------------//
 
 
 class workers{
@@ -80,4 +80,33 @@ class chairman extends workers{    //------------used entends-----------------
 
 $y1= new chairman("shanto",20,5000);
 $y1->info();
+
+//------------------practice-2------------------//
+
+
+class employer{
+    public $name;
+    public $age;
+    public $place;
+    public $income;
+
+    public function __construct($n,$a,$p,$i)
+    {
+        $this->name= $n;
+        $this->age = $a;
+        $this->place = $p;
+        $this->income = $i;
+    }
+
+    function info(){
+        echo "<h1>This is my profile</h1>";
+        echo "employe name is ".$this->name . "<br>";
+        echo "employe age is ".$this->age . "<br>";
+        echo "employe place is ".$this->place . "<br>";
+        echo "employe income is ".$this->income . "<br>";
+    }
+}
+
+$emplo= new employer("nishat",21,"dhaka",50000);
+$emplo->info();
 ?>
