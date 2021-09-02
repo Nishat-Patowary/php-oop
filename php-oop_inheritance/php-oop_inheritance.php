@@ -1,4 +1,6 @@
-<?php 
+<?php
+
+use teacher as GlobalTeacher;
 
 class employee{
     public $name;
@@ -140,6 +142,25 @@ class student{
 $stu= new student("mahmudul",21,"seven","A");
 echo $stu->detail();
 
+class teacher extends student{
+    public $phone=2000;
+    public $car=3000;
+    public $overtime = 5000;
+    public $totalincome;
+
+    function detail(){
+        $this->totalincome = $this->phone + $this->car + $this->overtime;
+
+        echo "<h1>The Teacher Information</h1>";
+        echo "The teacher name is " . $this->name .  "<br>";
+        echo "The teacher age is " . $this->age  . "<br>";
+        echo "The teacher salary is " . $this->totalincome;
+    }
+}
+
+$tec= new teacher("iqbal",32,5000);
+$tec->totalincome();
 //--------------------------practice-4-------------------------------//
+
 
 ?>
