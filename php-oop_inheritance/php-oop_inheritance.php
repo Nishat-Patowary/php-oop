@@ -109,4 +109,37 @@ class employer{
 
 $emplo= new employer("nishat",21,"dhaka",50000);
 $emplo->info();
+
+
+//--------------------------practice-3-------------------------------//
+
+class student{
+    public $name;
+    public $age;
+    public $class;
+    public $section;
+
+    public function __construct($n,$a,$c,$s)
+    {
+        $this->name = $n;
+        $this->age = $a;
+        $this->class = $c;
+        $this->section = $s;
+    }
+
+    function detail(){
+
+        echo "<h2>The student information</h2>";
+        echo "student name is " . $this->name  .  "<br>";
+        echo "student age is " . $this->age . "<br>";
+        echo "student class is " . $this->class . "<br>";
+        echo "student section is " . $this->section . "<br>";
+    }
+}
+
+$stu= new student("mahmudul",21,"seven","A");
+echo $stu->detail();
+
+//--------------------------practice-4-------------------------------//
+
 ?>
