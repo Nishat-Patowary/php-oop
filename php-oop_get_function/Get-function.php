@@ -37,6 +37,17 @@ $miv->tiger();
 
 //----------------------------//
 
+class tiger{
+    public function animal(){
+        echo "This is a " .get_class($this) . "<br>";
+    }
+}
+
+$mib= new tiger();
+echo $mib->animal();
+
+//----------------------------//
+
 class my_friend{
     public function closs(){
         echo "This is my ". get_class($this) . "<br>";
