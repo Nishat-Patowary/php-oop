@@ -115,51 +115,47 @@ $emplo->info();
 
 //--------------------------practice-3-------------------------------//
 
-class student{
+class worker{
     public $name;
     public $age;
-    public $class;
-    public $section;
+    public $salary;
 
-    public function __construct($n,$a,$c,$s)
+    public function __construct($n,$a,$s)
     {
         $this->name = $n;
-        $this->age = $a;
-        $this->class = $c;
-        $this->section = $s;
+        $this->age =$a;
+        $this->salary = $s;
+
     }
 
-    function detail(){
-
-        echo "<h2>The student information</h2>";
-        echo "student name is " . $this->name  .  "<br>";
-        echo "student age is " . $this->age . "<br>";
-        echo "student class is " . $this->class . "<br>";
-        echo "student section is " . $this->section . "<br>";
+    function calcu(){
+        echo "<h1>Worker information</h1>";
+        echo "Worker name is " .$this->name . "<br>";
+        echo "worker age is " . $this->age . "<br>";
+        echo "worker salary is " . $this->salary . "<br>";
     }
 }
 
-$stu= new student("mahmudul",21,"seven","A");
-echo $stu->detail();
+$work= new worker("hasan",25,5000);
+$work->calcu();
 
-class teacher extends student{
-    public $phone=2000;
-    public $car=3000;
+class managers extends worker{
+    public $car= 2000;
+    public $phone = 5000;
     public $overtime = 5000;
     public $totalincome;
 
-    function detail(){
-        $this->totalincome = $this->phone + $this->car + $this->overtime;
-
-        echo "<h1>The Teacher Information</h1>";
-        echo "The teacher name is " . $this->name .  "<br>";
-        echo "The teacher age is " . $this->age  . "<br>";
-        echo "The teacher salary is " . $this->totalincome;
+    function calcu(){
+        $this->totalincome = $this->car + $this->phone + $this->overtime;
+        echo "<h1>Manager information</h1>";
+        echo "The manager name is " . $this->name . "<br>";
+        echo "The manager age is " . $this->age . "<br>";
+        echo "The manager salary is " . $this->totalincome . "<br>";
     }
 }
 
-$tec= new teacher("iqbal",32,5000);
-$tec->totalincome();
+$manag= new managers("Tanvirul",21,10000);
+$manag->calcu();
 //--------------------------practice-4-------------------------------//
 
 
