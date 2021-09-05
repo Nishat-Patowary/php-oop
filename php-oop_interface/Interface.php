@@ -23,6 +23,16 @@ $mix=new partner3();
 $mix->nishat(50,30);
 $mix->niloy(80,30);
 
+
+interface student1{
+    function tanvir($x,$y);
+}
+
+interface student2{
+    function momin($x,$y);
+}
+
+class 
 //------------------------------------------------------------------//
 
 interface friend1{
