@@ -23,16 +23,28 @@ $mix=new partner3();
 $mix->nishat(50,30);
 $mix->niloy(80,30);
 
+//------------------------------------------------------------------//
 
-interface student1{
-    function tanvir($x,$y);
+interface first{
+    function one($a,$b);
+}
+interface second{
+    function two ($a,$b);
 }
 
-interface student2{
-    function momin($x,$y);
+class third implements first,second{
+     public function one($a,$b){
+        echo $a + $b;
+    }
+     public function two($a,$b){
+        echo $a * $b;
+    }
 }
 
-class 
+$neww= new third();
+$neww->one(50,50);
+$neww->two(50,30);
+
 //------------------------------------------------------------------//
 
 interface friend1{
